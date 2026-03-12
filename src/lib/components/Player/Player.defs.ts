@@ -38,7 +38,7 @@ export enum TYPE {
 	ALBUM = 'album'
 }
 
-export type PlayerItems = AlbumItem[] | SongItem[];
+export type PlayerItems = (AlbumItem | SongItem)[];
 
 export type SongItemInternal = { type: TYPE.TRACK } & SongItem;
 export type AlbumItemInternal = AlbumItem & { type: TYPE.ALBUM; items: SongItemInternal[] };

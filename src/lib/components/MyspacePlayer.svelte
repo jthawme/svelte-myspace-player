@@ -18,6 +18,8 @@
 	import MediaSession from './MediaSession.svelte';
 
 	interface MyspacePlayerProps {
+		tracks: Array<SongItem | AlbumItem>;
+
 		/** The total plays for the player */
 		totalPlaysCount?: number;
 
@@ -35,8 +37,6 @@
 
 		/** Snippet to override the default component for each track */
 		trackComponent?: Snippet<TrackComponentAttributes>;
-
-		tracks: Array<SongItem | AlbumItem>;
 
 		/** Callback that is called when a song is played. Useful for updating play counts */
 		onPlay?: (songId: string, albumId?: string | null) => void;
@@ -209,6 +209,12 @@
 		const { src, id } = currentPlaylistTracks[0];
 		Player.Load(src, id, playlistViewId);
 	}
+
+	$effect(() => {
+		if (internalTracks.length) {
+			playlistViewId = null;
+		}
+	});
 
 	onMount(() => {
 		loadInitial();
