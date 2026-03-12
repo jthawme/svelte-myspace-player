@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"
+	><path fill="currentColor" d="M80 80h352v352H80z" /></svg
+>
