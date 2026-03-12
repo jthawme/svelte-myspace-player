@@ -214,9 +214,7 @@
 		</div>
 		<div class="table-row">
 			<span class="table-row-header">displayComponent</span>
-			<span class="table-row-cell"
-				>Snippet&lt;[<a href="#current-track-info">CurrentTrackInfo</a>]&gt;</span
-			>
+			<span class="table-row-cell">Snippet&lt;[CurrentTrackInfo]&gt;</span>
 		</div>
 		<div class="table-row">
 			<span class="table-row-header">trackComponent</span>
